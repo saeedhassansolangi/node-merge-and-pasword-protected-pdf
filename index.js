@@ -14,7 +14,7 @@ const passProtectedCommand = `qpdf --replace-input --encrypt ${USER_PASSWORD} ${
 async function run() {
   await execute(mergeCommand);
   await execute(passProtectedCommand);
-  const base64Str = fs.readFileSync("entryFile.pdf", { encoding: "base64" });
+  const base64Str = fs.readFileSync(ENTRY_FILE, { encoding: "base64" });
   console.log(base64Str);
 }
 
